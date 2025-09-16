@@ -58,6 +58,8 @@
                     <li><a href="#about">Process</a></li>
                     <li><a href="#service">Services</a></li>
                     <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="smo-services.html">SMO Services</a></li>
                   </ul>
                 </nav>
               </div>
@@ -65,7 +67,7 @@
             <div class="col-lg-2 col-md-6 col-6">
               <div class="col-lg-12">
                         <div class="vl-about-inner-btn fl-right d-none d-lg-block">
-                          <button class="vl-iner-btn">
+                          <button class="vl-iner-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
                             Contact Us
                             <span><i class="fa-light fa-arrow-right"></i></span>
                           </button>
@@ -993,6 +995,73 @@ Online?
       </div>
     </div>
 
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 15px; border: none;">
+          <div class="modal-header" style="border-bottom: none; padding: 10px 30px; text-align: center;">
+            <h5 class="modal-title" id="contactModalLabel" style="font-size: 28px; font-weight: 700; color: #2c3e50;"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="font-size: 20px;"></button>
+          </div>
+          <!-- <div class="modal-body" style="padding: 30px;"> -->
+            <div class="vl-contact-iner-box br-8 mb-30" style="border: 1px solid #eeeeee2e; background-color: transparent; padding: 30px;">
+                 <h5 style="font-size: 28px; font-weight: 700; color: #2c3e50;">Get a Quote Now</h5>
+                  <p class="vl-section-description pb-28 text-dark text-center">Smarter quotes, quicker decisions. Start now with zero hassle.</p>
+                  <div class="vl-contact-iner-form">
+                    <form>
+                      <div class="row">
+                        <div class="col-lg-6 ">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Full Name</label>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-6 ">
+                         <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Work Email</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 ">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Company Name</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Phone Number</label>
+                          </div>
+                        </div>
+                       
+                        <div class="col-lg-12 mb-20">
+                         <div class="form-floating" style="border: none;">
+                          <textarea class="form-control border-0" placeholder="Leave a comment here" id="floatingTextarea" style="border: none; border-bottom: 1px solid #9c9fb1 !important; min-height: 120px;"></textarea>
+                          <label for="floatingTextarea">Comments</label>
+                        </div>
+                        </div>
+                        
+
+                         <div class="vl-btns mb-10 mt-3">
+                  <div class="vl-herobtn vl-upper">
+                  
+                    <button class="vl-iner-btn">
+                            Get a Quote
+                            <span><i class="fa-light fa-arrow-right"></i></span>
+                          </button>
+                  </div>
+                </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
     <!-- js file -->
     <script src="assets/js/jquery-2.1.3.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1005,6 +1074,40 @@ Online?
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      // Contact Modal functionality
+      $(document).ready(function() {
+        // Open modal when contact button is clicked
+        $('.vl-iner-btn:contains("Contact Us")').on('click', function(e) {
+          e.preventDefault();
+          $('#contactModal').modal('show');
+        });
+
+        // Handle form submission
+        $('#contactForm').on('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = {
+            firstName: $('#modalFirstName').val(),
+            lastName: $('#modalLastName').val(),
+            email: $('#modalEmail').val(),
+            phone: $('#modalPhone').val(),
+            subject: $('#modalSubject').val(),
+            message: $('#modalMessage').val()
+          };
+
+          // Here you can add your form submission logic
+          // For now, we'll just show a success message
+          alert('Thank you for your message! We will get back to you soon.');
+          
+          // Reset form and close modal
+          this.reset();
+          $('#contactModal').modal('hide');
+        });
+      });
+    </script>
   </body>
 
   <!-- Mirrored from unifato.com/otech/# by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Sep 2025 09:36:11 GMT -->

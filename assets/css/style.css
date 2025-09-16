@@ -7576,6 +7576,14 @@ span.rot-minus {
   background: #F2F2F2;
   padding: 20px;
 }
+
+.smo-services .vl-about-content-4 .vl-about-icon-box-4 {
+  background: #F2F2F2;
+  padding: 20px;
+  height: 100%;
+}
+
+
 .vl-about-content-4 .vl-about-icon-box-4-icon4 span {
   background: #f475461f;
   height: 50px;
@@ -8497,6 +8505,8 @@ span.rot-minus {
 }
 .vl-service-content {
   background: #1D254B;
+  background:  url(../img/images/main-bg.webp) no-repeat center;
+  opacity: 0.8;
   padding: 32px;
   border-radius: 8px;
 }
@@ -8577,6 +8587,7 @@ span.rot-minus {
   -o-transition: 0.3s;
   transition: 0.3s;
   background: var(--vl-white);
+  height: 100%;
 }
 .vl-service-content-3 .vl-service-icon span {
   background: #F4F5FD;
@@ -8626,10 +8637,10 @@ span.rot-minus {
   transition: 0.3s;
 }
 .vl-service-content-3:hover .vl-service-icon.icon3 span {
-  background: #2334DE;
+  background: var(--gradient-varun);
 }
 .vl-service-content-3:hover .vl-service-title {
-  color: #2334DE !important;
+  color: #000 !important;
   transition: 0.3s;
 }
 .vl-service-content-3:hover .vl-readmore {
@@ -8641,7 +8652,7 @@ span.rot-minus {
   transition: 0.3s;
 }
 .vl-service-content:hover .vl-service-icon span {
-  background: linear-gradient(85deg, #0D43FE -50.83%, #BB29F2 90.34%);
+  background: #fcf3f2;
   transition: 0.3s;
 }
 .vl-service-content:hover .vl-service-icon-2 span {
@@ -8652,7 +8663,7 @@ span.rot-minus {
   background: red;
 }
 .vl-service-icon span {
-  background: #343A5C;
+  background: #f475461f;
   height: 70px;
   width: 70px;
   line-height: 70px;
@@ -11396,3 +11407,39 @@ span.rot-minus {
 }
 
 /*# style.css.map */
+
+
+.form-floating>.form-control-plaintext~label::after, .form-floating>.form-control:focus~label::after, .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-select~label::after {
+    position: absolute;
+    inset: 1rem 0.375rem;
+    z-index: -1;
+    height: 1.5em;
+    content: "";
+    background-color: transparent;
+    border-radius: var(--bs-border-radius);
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=number], input[type=password], input[type=url], textarea {
+   
+    color: #000 !important;
+   
+}
+
+ .sem-services .vl-about-content-4 .vl-about-icon-box-4-icon4 span{
+  display: inline-block;
+}
+
+.sem-servicesection .vl-service-content {
+    background: #1D254B;
+    background: none;
+    opacity: 0.8;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sem-servicesection .vl-service-content-3 .vl-service-icon span{
+  background: none;
+
+}
+
+.form-control {border-radius: none !important;}
